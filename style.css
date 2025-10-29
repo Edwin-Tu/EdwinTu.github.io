@@ -1,0 +1,105 @@
+:root{
+  --max-width: 960px;
+  --accent: #2563eb;
+  --bg: #f7f8fb;
+  --muted: #6b7280;
+  --radius: 10px;
+  --container-padding: 20px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans TC",sans-serif;
+  color:#111827;
+  background:var(--bg);
+  line-height:1.6;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:var(--container-padding);
+}
+.site-header{
+  background:#fff;
+  border-bottom:1px solid #e6e9ef;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.site-title{font-size:1.2rem;margin:0;padding:10px 0}
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:0.95rem}
+.nav a:hover{color:var(--accent)}
+
+h2{
+  color:#1f2937;
+  margin:0 0 1rem;
+  font-size:1.5rem;
+}
+
+.section{padding:2rem 0}
+.section.alt{background:#fff}
+.exp-item{
+  background:#fff;
+  padding:1.25rem;
+  border-radius:var(--radius);
+  border:1px solid #eef2ff;
+  margin-bottom:1rem;
+}
+.exp-item h3{
+  margin:0 0 0.5rem;
+  font-size:1.1rem;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+.project{
+  background:#fff;
+  padding:1.25rem;
+  border-radius:var(--radius);
+  border:1px solid #eef2ff;
+}
+.project h4{margin:0 0 0.75rem}
+
+.muted{color:var(--muted);font-size:0.9rem}
+
+ul{
+  list-style:none;
+  padding:0;
+  margin:0.5rem 0;
+}
+ul li{
+  margin:0.5rem 0;
+  position:relative;
+  padding-left:1.25rem;
+}
+ul li:before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+}
+
+/* Contact links */
+#contact a{
+  color:var(--accent);
+  text-decoration:none;
+}
+#contact a:hover{text-decoration:underline}
+
+.site-footer{
+  text-align:center;
+  padding:1rem 0;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* 響應式設計 */
+@media (max-width:640px){
+  .nav{display:none} /* 小螢幕先隱藏選單 */
+  .projects-grid{grid-template-columns:1fr}
+}

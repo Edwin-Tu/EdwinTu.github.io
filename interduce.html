@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edwin 的自我介紹</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 小幅樣式覆寫以確保模板在未部署時也好看 */
+    body{background:var(--bg, #f7f8fb)}
+    .template-note{background:#fff8db;border:1px solid #ffecb5;padding:12px;border-radius:8px;margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">你的姓名（範例：Edwin Tu）</h1>
+      <nav class="nav">
+        <a href="#about">關於我</a>
+        <a href="#experience">經歷</a>
+        <a href="#projects">專案</a>
+        <a href="#skills">技能</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="template-note">
+        <strong>提示：</strong>這是一個示範模板。請替換下列區塊中的範例文字為你的真實內容。
+      </div>
+
+      <section id="about" class="section">
+        <h2>關於我</h2>
+        <p>我是資工背景的軟體工程師 / 學生，專注於後端系統、演算法與效能優化。喜歡把抽象問題拆解成可測試、可維護的程式碼。</p>
+        <!-- 替換成你的個人自述（2-6 句） -->
+      </section>
+
+      <section id="experience" class="section alt">
+        <h2>經歷</h2>
+        <article class="exp-item">
+          <h3>軟體工程實習生 — 某科技公司</h3>
+          <p class="muted">2024 夏季 · 台北</p>
+          <p>在團隊中負責開發與測試微服務 API，使用 Docker 與 CI/CD，並進行效能分析與優化。</p>
+        </article>
+
+        <article class="exp-item">
+          <h3>競賽隊員 / 校內程式設計社</h3>
+          <p class="muted">2022 - 現在 · 學校名稱</p>
+          <p>參與演算法訓練與比賽，協助教導新手，題目涵蓋圖論、DP 與貪婪演算法。</p>
+        </article>
+
+        <!-- 如需加入更多經歷，複製 article.exp-item 並修改內容 -->
+      </section>
+
+      <section id="projects" class="section">
+        <h2>專案</h2>
+        <div class="projects-grid">
+          <div class="project">
+            <h4>即時聊天室</h4>
+            <p>說明：使用 WebSocket 實作即時聊天室，支援房間、私人訊息與簡單認證。</p>
+            <p class="muted">技術：Node.js, Socket.io, Express</p>
+          </div>
+
+          <div class="project">
+            <h4>資料視覺化儀表板</h4>
+            <p>說明：後端收集並整理資料，前端以 D3.js 顯示互動式圖表與洞察。</p>
+            <p class="muted">技術：Python Flask, D3.js</p>
+          </div>
+
+          <div class="project">
+            <h4>演算法題庫整理</h4>
+            <p>說明：整理常見演算法題目、詳細解析與多語言範例程式碼。</p>
+            <p class="muted">技術：Markdown, GitHub Pages</p>
+          </div>
+        </div>
+        <!-- 請用上方範例替換為你的專案；每個 project 區塊含：名稱、連結（可加 <a> 標籤）、技術、短描述 -->
+      </section>
+
+      <section id="skills" class="section alt">
+        <h2>技能</h2>
+        <ul>
+          <li>程式語言：Python、JavaScript、C/C++、Java</li>
+          <li>工具 / 框架：Docker、Flask、Node.js、React</li>
+          <li>其他：Git、Linux、SQL、雲端（AWS/GCP）</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>聯絡方式</h2>
+        <ul>
+          <li>Email：<a href="mailto:you@example.com">you@example.com</a></li>
+          <li>GitHub：<a href="#">github.com/yourname</a></li>
+          <li>LinkedIn：<a href="#">你的 LinkedIn</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 你的姓名 — 個人介紹頁面</small>
+    </div>
+  </footer>
+</body>
+</html>

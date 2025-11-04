@@ -27,6 +27,11 @@ body{
   z-index:10;
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between}
+.header-left{display:flex;align-items:center;gap:12px}
+/* 圓形容器，讓圖片可以被裁切並保持圓形 */
+.profile-wrap{width:48px;height:48px;border-radius:50%;overflow:hidden;flex:0 0 48px;display:inline-block}
+/* 圖片使用 cover 與 object-position 控制焦點位置，並放大 20% */
+.profile-photo{width:100%;height:100%;object-fit:cover;object-position:50% 75%;transform:scale(1.2);display:block;border:0;}
 .site-title{font-size:1.2rem;margin:0;padding:10px 0}
 .nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:0.95rem}
 .nav a:hover{color:var(--accent)}
@@ -103,3 +108,31 @@ ul li:before{
   .nav{display:none} /* 小螢幕先隱藏選單 */
   .projects-grid{grid-template-columns:1fr}
 }
+
+/* 在小螢幕上稍微縮小頭像以保持版面 */
+@media (max-width:420px){
+  .profile-wrap{width:40px;height:40px}
+}
+/* 大頭像在頁面中間顯示（置中並放大） */
+.template-note{background:transparent;border:0;padding:18px 0 8px;margin-bottom:18px}
+.template-note-inner{display:flex;align-items:center;gap:20px;justify-content:center;max-width:880px;margin:0 auto;transform:translateX(-6%)}
+.template-note-left{flex:0 0 200px;display:flex;justify-content:center}
+.template-note-right{flex:1}
+.hero-avatar-wrap{display:flex;justify-content:center;align-items:center}
+.hero-avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;object-position:50% 75%;transform:scale(1.2);box-shadow:0 6px 20px rgba(2,6,23,0.12);border:4px solid #fff}
+
+@media (max-width:640px){
+  .hero-avatar{width:120px;height:120px;transform:scale(1.05)}
+  .template-note-inner{transform:none;flex-direction:row}
+}
+
+@media (max-width:420px){
+  .hero-avatar{width:88px;height:88px;transform:none}
+  .template-note-inner{flex-direction:column;align-items:center;gap:12px}
+  .template-note-left{flex:auto}
+  .template-note-right{flex:auto}
+}
+
+/* utility classes to nudge the whole inner block left/right */
+.template-note--shift-left .template-note-inner{transform:translateX(-8%)}
+.template-note--shift-right .template-note-inner{transform:translateX(8%)}

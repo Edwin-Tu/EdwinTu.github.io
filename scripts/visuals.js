@@ -126,21 +126,7 @@
 
   // toggle control
   function initToggle(){
-    const btn = document.getElementById('toggle-visuals');
-    if(!btn) return;
-    btn.addEventListener('click', function(){
-      const off = document.body.dataset.visuals === 'off';
-      document.body.dataset.visuals = off ? 'on' : 'off';
-      btn.setAttribute('aria-pressed', String(!off));
-      if(!off) { // just turned off
-        cancelAnimationFrame(animationId);
-        animationId = null;
-        clearCanvas();
-      } else {
-        // turned on
-        if(!animationId) animationId = requestAnimationFrame(step);
-      }
-    });
+    // toggle removed: visuals default to body data-visuals attribute
   }
 
   // visibility handling to save CPU
